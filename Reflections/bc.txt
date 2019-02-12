@@ -1,0 +1,21 @@
+The Math:
+Binomial coefficients are represented by C(n, k), are used to represent the coefficients of a binomial given by the fomrula:
+(a + b)n  = C(n, 0)an + ... + C(n, k)an-kbk + ... + C(n, n)bn
+Pascal's Triangle gives us the coefficients for an expanded binomial of the form (a + b)n, where n is the row of the triangle.
+
+The Programming part:
+The above can be achieved in 2 ways:
+1: Dynamic Programming
+2: Recursion
+
+1. DP:
+Using 2 for loops,after initializing an n*k 2d array would obviously occupy more space(well, because of extra upper triagular part that would nowhere be invloved in operation, inshort obolete).
+However this if implemented using linked list, would be a good way, storing the intermedeate results as ofcourse the further operations would use it.
+i.e c(n,k) = c(n-1,k-1)+c(n-1,k) 
+
+2. Recursion:
+This approach would use less lines of code comparitively and use obviously stack for its operations. However time complexity would be more and might be a bad choice incase of large numbers compared to DP.
+
+The Twist:
+DP using 1D array:
+It gives only that value that's requested(not the previousvalues,unlike other 2). Its proabaly best DP appraoch without creating(wasting) n*k array and instead using the intermedeate results and do the job with 1d array.
