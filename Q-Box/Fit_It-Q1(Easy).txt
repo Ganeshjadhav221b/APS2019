@@ -1,0 +1,25 @@
+TITLE: Fit It in the Box.
+
+PROBLEM STATEMENT:
+Given a rectangular box(can be a square also) of dimensions: 'L' as length, 'B' as breadth and 'H' as height,
+find if a given stick of size 's' fits in it. Note that the stick, while fitting cannot be bent and must be fit parallel to the box's base.
+
+INPUT: 
+First line contains the number of test cases. Every test case has 2 lines, first line has L,B,H and second line has 's'.
+
+OUTPUT FORMAT: 
+If stick does fit,print 'YES' otherwise, print the extra length(ceiled value) of stick that needs to be cut to make it fit.
+ 
+CONSTRAINTS:
+1<L,B,H<10^9
+
+SAMPLE TEST CASES:
+INPUT:
+2
+2 2 2
+3
+2 2 2
+2
+OUTPUT:
+ 1
+ YES

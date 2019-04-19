@@ -1,0 +1,30 @@
+PROBLEM TITLE: THE MISSIN_ CHARACT_RS
+
+PROBLEM STATEMENT:
+ Given a string, find if characters of the string are contigous(lexicographical sense). If they are, then print 'YES'(no inverted commas). Otherwise print the maximum number of missing characters between (any) 2 characters.
+                    
+INPUT:
+ First line takes the number of strings(n) to be taken as input.
+       For every i'th string in n strings:
+       The first line takes the number of characters in the string.
+       The next line takes the input string.
+
+NOTE: The input consists of only english alphabets(no special symbols).
+
+CONSTRAINTS:
+1<=n<=10^9
+
+OUTPUT FORMAT:
+print 'YES' if the characters are contigous, print the maximum number of in-between missing characters otherwise. 
+
+SAMPLE TEST CASES:
+(1)INPUT: fda
+OUPUT:2
+Explanation: Here the missing characters between 'a' and 'd' = 2 i.e 'b' and 'c', and missing between 'd' and 'f' = 1 i.e 'e'.
+
+(2)INPUT:abccccdaaaeeee
+OUTPUT:YES
+
+(3)INPUT:dehg
+OUTPUT:1
+Explanation: 'f' is missing between 'd' and 'e'.
