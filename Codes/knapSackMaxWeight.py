@@ -11,10 +11,14 @@ weight = 0
 for i in items:
     for j in range(capacity+1): 
         #print(i,j,itemWeight[i],itemValue[i])
+        #Check if capacity is greater than current item's weight
+        #If it is, then see if u can add and get max value.
+        #else, continue with the previous max
         if j>=itemWeight[i]:
             weight = valueTable[i-1][j-itemWeight[i]]+itemValue[i]
             #print("Substituting(",i,j,"): ",valueTable[i][j]," with  max of ",valueTable[i-1][j]," and ",weight)
             valueTable[i][j] = max(valueTable[i-1][j],weight)
+          
         elif j<itemWeight[i]:
             #print("keeping the same value (",i,j,"): ",valueTable[i][j]," with previous ",valueTable[i-1][j])
             valueTable[i][j] = valueTable[i-1][j]
