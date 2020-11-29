@@ -29,7 +29,7 @@ def longIncSubSum():
             if arrList[i]>arrList[j] and maximum<dp[j]:
                 maximum =  dp[j]
         
-        dp[i] += 0 if maximum == -sys.maxsize else maximum
+        dp[i] += max(0,maximum)
     
     print(dp)
     
