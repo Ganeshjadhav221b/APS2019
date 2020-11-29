@@ -15,3 +15,22 @@ for i in range(n):
             indexList[i] += 1
             
 print(max(indexList))
+
+
+
+def longIncSubSum():
+    #arrList = [5,11,3,15,30,25]
+    arrList = [5,11,3,40,50,23]
+    n = len(arrList)
+    dp = [1]*n
+    for i in range(1,n):
+        maximum = -sys.maxsize
+        for j in range(i-1,-1,-1):
+            if arrList[i]>arrList[j] and maximum<dp[j]:
+                maximum =  dp[j]
+        
+        dp[i] += 0 if maximum == -sys.maxsize else maximum
+    
+    print(dp)
+    
+longIncSubSum()
